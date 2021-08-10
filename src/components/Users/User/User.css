@@ -1,0 +1,14 @@
+.user{
+    width: 45%;
+    border: 1px dotted silver;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgb(255, 255, 255);
+    color: rgb(255, 142, 0);
+}
+.user:hover {
+    color: rgb(255, 115, 0);
+    box-shadow: 0 5px 10px rgb(225, 0, 0);
+}

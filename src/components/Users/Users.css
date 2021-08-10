@@ -1,0 +1,7 @@
+.users {
+    box-shadow: 0 5px 10px rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
