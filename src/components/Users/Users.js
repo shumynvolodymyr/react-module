@@ -246,8 +246,8 @@ export default function Users() {
     return (
         <div className={'users'}>
 
-            {usersList.map(value =>
-            <User user={value}/>
+            {usersList.map((value, index) =>
+                <User user={value} key={index}/>
             )}
 
         </div>

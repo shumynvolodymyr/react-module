@@ -1,11 +1,6 @@
 import Geo from "./Geo/Geo";
 
-export default function Address(props) {
-
-    const {city, zipcode, geo, street, suite} = props.address
-
-    // console.log(props);
-    // console.log(geo);
+export default function Address({address: {city, zipcode, geo, street, suite}}) {
 
     return (
         <div className={'address'}>
@@ -17,7 +12,7 @@ export default function Address(props) {
                 <b>Suite:</b> {suite}, <br/>
             </p>
             {
-                [geo].map(value => <Geo geo={value}/>)
+                <Geo geo={geo}/>
             }
         </div>
     );

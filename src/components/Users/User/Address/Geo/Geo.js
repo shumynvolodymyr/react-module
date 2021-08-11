@@ -1,5 +1,4 @@
-export default function Geo(props) {
-    const {lat, lng} = props.geo;
+export default function Geo({geo:{lat,lng}}) {
     return (
         <div className={'geo'}>
             <h3>Geo:</h3>
