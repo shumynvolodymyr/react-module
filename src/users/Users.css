@@ -1,0 +1,12 @@
+.allUsers {
+    text-align: center;
+    color: orange;
+}
+
+.users {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: orange;
+}

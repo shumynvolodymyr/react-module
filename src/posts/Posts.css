@@ -1,0 +1,18 @@
+.allPosts button{
+    color: orange;
+    text-align: center;
+    font-size: 25px;
+    width: 200px;
+    margin: 10px;
+}
+
+.postsNone {
+    display: none;
+}
+
+.postsBlock{
+    display: block;
+    color: orange;
+    margin: 10px;
+    padding: 10px;
+}

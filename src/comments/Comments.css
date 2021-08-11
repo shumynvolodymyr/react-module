@@ -1,0 +1,17 @@
+.allComments button {
+    color: orange;
+    text-align: center;
+    font-size: 25px;
+    width: 200px;
+    margin: 10px;
+}
+
+.commentNone {
+    display: none;
+}
+
+.commentBlock{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
