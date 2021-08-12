@@ -1,0 +1,10 @@
+.user {
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px dotted silver;
+}
+
+h1{
+    text-align: center;
+}
