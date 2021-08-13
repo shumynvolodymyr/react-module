@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
-import {getUsers} from "../API/users.api";
+import {getUsers} from "../../API/users.api";
 import User from "../user/User";
-import {getPostsOfUser} from "../API/postsOfUser.api";
+import {getPostsOfUser} from "../../API/postsOfUser.api";
 import PostsOfUser from "../postsOfUser/PostsOfUser";
 import './Users.css'
 
