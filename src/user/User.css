@@ -1,0 +1,19 @@
+.user {
+    border: 1px dotted crimson;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.user > h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+button {
+    color: crimson;
+    box-shadow: 5px 5px 5px crimson ;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 85%;
+}
