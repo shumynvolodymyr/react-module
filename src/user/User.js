@@ -10,7 +10,7 @@ export default function User({user, postsOfUser}) {
     return (
         <div className={'user'}>
             <h2>{id}. {name} {username}</h2>
-            <button onClick={clickPostsOfUser}>POST</button>
+            <button onClick={clickPostsOfUser}>POSTS</button>
 
         </div>
     );
