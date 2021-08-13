@@ -8,12 +8,10 @@ import './Users.css'
 export default function Users() {
 
     let [users, setUsers] = useState([]);
-    let [user, setUser] = useState({});
     let [posts, setPosts] = useState(null);
 
 
     const postsOfUser = (usr) => {
-        setUser({...usr});
         getPostsOfUser(usr.id).then(value => setPosts([...value]));
     }
 
