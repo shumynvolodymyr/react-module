@@ -1,0 +1,13 @@
+.wrap {
+    display: flex;
+}
+.posts-box {
+    width: 45%;
+}
+
+.info-box {
+    width: 45%;
+    background: rgba(192, 192, 192, 0.28);
+    padding: 10px;
+    text-align: center;
+}
