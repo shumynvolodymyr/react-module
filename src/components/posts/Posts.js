@@ -20,6 +20,7 @@ export function Posts() {
     return (
         <div className={'wrap'}>
             <div className={'posts-box'}>
+                <h1><i>Posts:</i></h1>
                 {
                     posts.map(value => <Post key={value.id} post={value} detailsInfoOfPost={detailsInfoOfPost}/>)
                 }

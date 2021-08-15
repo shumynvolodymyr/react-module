@@ -22,6 +22,7 @@ export function Comments() {
     return (
         <div className={'wrap'}>
             <div className={'comments-box'}>
+                <h1><i>Comments:</i></h1>
                 {comments.map(value =>
                     <Comment
                         key={value.id}
