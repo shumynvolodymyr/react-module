@@ -7,8 +7,6 @@ export function Comments() {
 
     let [comments, setComments] = useState([]);
     let [comment, setComment] = useState(null);
-    console.log(comment);
-
 
     const detailsInfoOfComment = (id) => {
         let searchComment = comments.filter(value => value.id === id);

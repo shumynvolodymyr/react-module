@@ -19,6 +19,7 @@ export function Posts() {
 
     return (
         <div className={'wrap'}>
+
             <div className={'posts-box'}>
                 <h1><i>Posts:</i></h1>
                 {
@@ -32,6 +33,7 @@ export function Posts() {
                 <p><i>Body: {post[0].body}</i></p>
             </div>
             }
+
         </div>
     )
 }
