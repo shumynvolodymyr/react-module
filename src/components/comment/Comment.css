@@ -1,0 +1,11 @@
+.comment-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.comment-box button {
+    height: 25px;
+    margin-top: 5%;
+}
