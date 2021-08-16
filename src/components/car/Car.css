@@ -1,0 +1,8 @@
+.car-box {
+    width: 15%;
+    border: 1px dotted lightgrey;
+    margin: 10px;
+    text-align: center;
+    background: silver;
+    box-shadow: 5px 5px 5px crimson;
+}
