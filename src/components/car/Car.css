@@ -1,0 +1,26 @@
+.car-box {
+    background: rgba(0, 0, 0, 0.7);
+    border: silver 1px dotted;
+    box-sizing: border-box;
+    box-shadow: 10px 5px 5px red;
+    color: orange;
+    margin: 10px;
+    text-align: center;
+    width: 12%;
+}
+
+.description-car-box {
+    height: 60%;
+}
+.btn-box {
+    height: fit-content;
+}
+
+#deleteButton:hover {
+    background: red;
+    box-shadow: 2px 2px 2px lightskyblue;
+}
+#editButton:hover {
+    background: lightskyblue;
+    box-shadow: 2px 2px 2px red;
+}

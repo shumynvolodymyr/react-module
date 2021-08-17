@@ -1,0 +1,19 @@
+.post-edit-box {
+margin: 10px;
+    background: lightskyblue;
+    width: fit-content;
+}
+input{
+    margin: 5px;
+    text-align: center;
+    width: 90%;
+}
+
+#btn {
+    margin: 10px 60%;
+    box-shadow: 10px 5px 5px red;
+    color: orange;
+}
+
+#btn:hover {background: rgba(0, 0, 0, 0.7)}
+
