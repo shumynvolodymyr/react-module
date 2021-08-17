@@ -10,7 +10,7 @@ export default function Form() {
         saveCar(formState);
     };
 
-    function onFormChange(e) {
+    let onFormChange = (e) => {
         setFormState({...formState, [e.target.name]: e.target.value})
     }
 
