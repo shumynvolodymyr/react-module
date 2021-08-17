@@ -15,7 +15,7 @@ export default function Cars() {
     return (
         <div className={'wrap'}>
             <div className={'form-box'}>
-         <Form/>
+                <Form/>
             </div>
             <div className={'cars-box'}>
                 <h1>CARS LIST</h1>{
