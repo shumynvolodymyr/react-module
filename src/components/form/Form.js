@@ -12,6 +12,7 @@ export default function Form() {
 
     let onFormChange = (e) => {
         setFormState({...formState, [e.target.name]: e.target.value})
+        console.log(e.target.value)
     }
 
     return (
