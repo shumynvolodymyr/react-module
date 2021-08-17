@@ -14,8 +14,6 @@ export default function PostForm() {
         setFormState({...formState, [e.target.name]: e.target.value});
     }
 
-
-
     return (
         <div className={'post-edit-box'}>
             <form onSubmit={onSubmitForm}>

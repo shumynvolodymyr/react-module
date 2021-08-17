@@ -23,6 +23,7 @@ import PostForm from "./components/form/PostForm";
 function App() {
     return (
         <div>
+            <PostForm/>
             <Cars/>
         </div>
     );

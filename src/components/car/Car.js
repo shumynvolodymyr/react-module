@@ -2,14 +2,18 @@ import './Car.css'
 import {deleteCar} from "../../API/deleteCar";
 import {putCar} from "../../API/putCar";
 
-export default function Car({car:{id, model, price, year}, edit}) {
+export default function Car({car:{id, model, price, year}}) {
 
     const delCar = () => {
         deleteCar(id);
     }
 
     const editCar = () => {
-        edit(id, model, price, year);
+        putCar(id, {
+            model: prompt(`Please enter a new model for ${id}`),
+            price: prompt(`Please enter a new price for ${id}`),
+            year: prompt(`Please enter a new year for ${id}`),
+        });
     }
 
     return (
