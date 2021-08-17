@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {getCars} from "../../API/getCars";
 import './Cars.css'
 
-export default function Cars({edit}) {
+export default function Cars() {
 
     let [cars, setCars] = useState([]);
 
@@ -16,7 +16,7 @@ export default function Cars({edit}) {
         <div className={'wrap'}>
 
             {
-                cars.map(value => <Car key={value.id} car={value} edit={edit}/>)
+                cars.map(value => <Car key={value.id} car={value}/>)
             }
         </div>
     )
