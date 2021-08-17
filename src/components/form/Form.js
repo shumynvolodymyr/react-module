@@ -7,8 +7,7 @@ export default function Form() {
 
     let onFormSubmit = (e) => {
         e.preventDefault();
-        let carToSave = {model: e.target.model.value, price: e.target.price.value, year: e.target.year.value};
-        saveCar(carToSave);
+        saveCar(formState);
     };
 
     function onFormChange(e) {
