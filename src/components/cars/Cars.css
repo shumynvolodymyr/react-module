@@ -1,4 +1,4 @@
-.wrap {
+.cars-box {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
