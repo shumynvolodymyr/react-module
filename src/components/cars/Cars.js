@@ -10,7 +10,7 @@ export default function Cars() {
 
     useEffect(() => {
         getCars().then(value => setCars([...value]))
-    }, [])
+    }, [cars])
 
     return (
         <div className={'wrap'}>
