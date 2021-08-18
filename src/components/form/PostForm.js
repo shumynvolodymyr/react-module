@@ -1,6 +1,6 @@
 import './PostForm.css'
 import {useState} from "react";
-import {postCar} from "../../API/postCar";
+import {postCar} from "../../API/carApi/postCar";
 
 export default function PostForm() {
 

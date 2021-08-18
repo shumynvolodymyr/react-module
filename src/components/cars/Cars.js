@@ -1,6 +1,6 @@
 import Car from "../car/Car";
 import {useEffect, useState} from "react";
-import {getCars} from "../../API/getCars";
+import {getCars} from "../../API/carApi/getCars";
 import './Cars.css'
 
 export default function Cars() {
