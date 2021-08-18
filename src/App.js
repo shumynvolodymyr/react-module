@@ -18,13 +18,32 @@
 
 import './App.css';
 import Cars from "./components/cars/Cars";
-import PostForm from "./components/form/PostForm";
+import PostForm from "./components/form/formForAddCar/PostForm";
+import UserSelectComponent from "./components/form/formForUser/UserSelectComponent";
+import PostsOfUser from "./components/postsOfUser/PostsOfUser";
+import {getPostsOfUser} from "./API/userApi/getPostsOfUser";
+import {useState} from "react";
 
 function App() {
+
+    let [posts, setPosts] = useState([]);
+
+    const getUserID = (id) => {
+        getPostsOfUser(id).then(value => setPosts([...value]));
+    }
+
     return (
-        <div>
+        <div className={'app'}>
+
+            <h2>Add a car:</h2>
             <PostForm/>
+            <h2>Lists of cars:</h2>
             <Cars/>
+            <h2>Users:</h2>
+            <UserSelectComponent getUserID={getUserID}/>
+            <h2>Posts of user:</h2>
+            <PostsOfUser posts={posts}/>
+
         </div>
     );
 }

@@ -1,0 +1,10 @@
+.post-box {
+    background: rgba(0, 0, 0, 0.7);
+    border: silver 1px dotted;
+    box-sizing: border-box;
+    box-shadow: 10px 5px 5px red;
+    color: orange;
+    margin: 10px;
+    text-align: center;
+    width: 23%;
+}

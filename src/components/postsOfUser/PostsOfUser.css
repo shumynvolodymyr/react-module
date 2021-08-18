@@ -1,0 +1,7 @@
+.posts-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px;
+    background: lightgray;
+}
