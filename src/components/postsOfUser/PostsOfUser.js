@@ -1,4 +1,4 @@
-import PostOfUser from "../postOfUser/postOfUser/PostOfUser";
+import PostOfUser from "../postOfUser/PostOfUser";
 import './PostsOfUser.css'
 
 export default function PostsOfUser({posts}) {
