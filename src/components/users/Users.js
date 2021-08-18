@@ -9,7 +9,7 @@ export default function Users() {
 
     useEffect(() => {
         getUsers().then(value => setUsers([...value]));
-    }, [users])
+    }, [])
 
     return (
         <div className={'users-box'}>

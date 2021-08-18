@@ -1,4 +1,5 @@
 import './User.css'
+
 export default function User({user}) {
     const {
         id,
@@ -18,17 +19,23 @@ export default function User({user}) {
                 Email: {email}, <br/>
                 Phone: {phone}, <br/>
                 Website: {website}, <br/>
-                <hr/>
+            </p>
+            <hr/>
+            <p>
                 Address: <br/>
                 Street: {street}, <br/>
                 Suite: {suite}, <br/>
                 City: {city}, <br/>
                 Zipcode: {zipcode}, <br/>
-                <hr/>
+            </p>
+            <hr/>
+            <p>
                 Geo: <br/>
                 lat: {lat}, <br/>
                 lng: {lng}, <br/>
-                <hr/>
+            </p>
+            <hr/>
+            <p>
                 Company: <br/>
                 name: {companyName}, <br/>
                 catchPhrase: {catchPhrase}, <br/>

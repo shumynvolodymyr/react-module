@@ -8,7 +8,7 @@ export default function Posts() {
 
     useEffect(() => {
         getPosts().then(value => setPosts([...value]));
-    }, [posts])
+    }, [])
 
     return (
         <div className={'posts-box'}>

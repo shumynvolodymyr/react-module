@@ -9,6 +9,7 @@ import './App.css';
 import {
     BrowserRouter as Router,
     Route,
+    Switch,
     Link,
 } from "react-router-dom";
 import Users from "./components/users/Users";
@@ -23,10 +24,11 @@ function App() {
                 <Link to={'/posts-page'}>Posts page</Link>
                 <Link to={'/comments-page'}>Comments page</Link>
             </div>
-
-            <Route path={'/users-page'} component={Users}/>
-            <Route path={'/posts-page'} component={Posts}/>
-            <Route path={'/comments-page'} component={Comments}/>
+            <Switch>
+                <Route path={'/users-page'} component={Users}/>
+                <Route path={'/posts-page'} component={Posts}/>
+                <Route path={'/comments-page'} component={Comments}/>
+            </Switch>
         </Router>
     );
 }

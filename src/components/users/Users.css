@@ -4,3 +4,10 @@
     width: 100%;
     background: rgba(255, 248, 220, 0.04);
 }
+
+.users-box hr {
+    border: none;
+    background-color: #fe9600;
+    color: #fe9600;
+    height: 2px;
+}

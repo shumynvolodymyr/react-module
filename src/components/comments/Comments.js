@@ -9,7 +9,7 @@ export default function Comments() {
 
     useEffect(() => {
         getComments().then(value => setComments([...value]));
-    }, [comments])
+    }, [])
 
     return (
         <div className={'comments-box'}>
