@@ -1,0 +1,6 @@
+.posts-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background: rgba(255, 248, 220, 0.04);
+}

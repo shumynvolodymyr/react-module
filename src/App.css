@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(to bottom, #fe9600 0%,#f06601 100%);
+    border-bottom: 1px solid #b53600;
+}
+
+.wrapper a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 5px;
+}
+
+.wrapper a:hover{
+    color: red;
+}
