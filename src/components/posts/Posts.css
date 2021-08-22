@@ -1,0 +1,15 @@
+.posts-box {
+    display: flex;
+    background: rgba(255, 248, 220, 0.04);
+    margin: 10px;
+    justify-content: center;
+}
+
+.post-info-box {
+    width: 50%;
+    text-align: center;
+}
+
+.posts {
+    width: 50%;
+}
