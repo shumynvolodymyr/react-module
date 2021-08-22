@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {getUser} from "../../API/user.api";
+import './UserDetails.css'
 
 export default function UserDetails({match: {params: {id}}}) {
 
@@ -9,10 +10,8 @@ export default function UserDetails({match: {params: {id}}}) {
         getUser(id).then(value => setUser({...value}))
     }, [id])
     return (
-        <div className={'user-box'}>
-            {
-                JSON.stringify(user)
-            }
+        <div className={'user-info'}>
+            {JSON.stringify(user)}
         </div>
     );
 }

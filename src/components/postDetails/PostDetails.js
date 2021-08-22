@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {getPost} from "../../API/posts.api";
+import './PostDetails.css'
 
 export default function PostDetails({match: {params: {id}}}) {
 
@@ -10,7 +11,7 @@ export default function PostDetails({match: {params: {id}}}) {
     }, [id])
 
     return (
-        <div>
+        <div className={'post-info'}>
             {
                 JSON.stringify(post)
             }

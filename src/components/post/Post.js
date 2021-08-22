@@ -1,4 +1,5 @@
 import {useHistory} from "react-router";
+import './Post.css'
 
 export default function Post({post, url}) {
     let history = useHistory();
@@ -6,10 +7,12 @@ export default function Post({post, url}) {
         history.push(url + '/' + post.id,
             post
         );
-    }
+    };
     return (
-        <div>
-            {post.title} - <button onClick={navigate}>post details</button>
+        <div className={'post-box'}>
+            <div className={'titlePost'}>{post.title}</div>
+            <button id={'button'} onClick={navigate}>post details</button>
         </div>
-    );
+    )
 }
+
