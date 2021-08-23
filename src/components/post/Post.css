@@ -9,14 +9,14 @@
 }
 
 .titlePost {
-    width: 75%;
+    width: 90%;
     text-transform: uppercase;
     font-weight: 600;
 }
 
 #button {
     background: -webkit-linear-gradient(top, #f29421 0%,#FF2E00 50%,#EC1606 100%);
-    width: 25%;
+    width: 10%;
     height: fit-content;
 }
 
