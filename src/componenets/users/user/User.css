@@ -1,0 +1,24 @@
+.user-box {
+    display: flex;
+    width: 48%;
+    border: 1px dashed #d6d6d6;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.userName-box {
+    width: 90%;
+    text-align: center;
+}
+
+#btnStyle {
+    width: 8%;
+    height: 40%;
+    margin: auto;
+    background: linear-gradient(#4db028, #b5fc00);
+    border-radius: 5px;
+}
+
+#btnStyle:hover {
+    background: linear-gradient(#b5fc00, #4db028);
+}

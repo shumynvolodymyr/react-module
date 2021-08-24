@@ -1,60 +1,45 @@
+// Є дві лінки
+// /users
+// /posts
+//
+// /users - робить все те, що було на занятті останнім способом (через кнопку та ддатковий запит на сервер)
+//
+// /posts
+// Отримує posts з jsobplaceholder, виводить їх всі.
+//     Біля кожного поста зробити лінку (не конопку) яка буде вести на детальну інформацію поста. Детальну інформацію отримувати через history.state
+
 import './App.css';
-import {createCar, getCar} from "./services/services/car.servise";
-import {useEffect, useState} from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+} from "react-router-dom";
+import Users from "./componenets/users/Users";
+import Posts from "./componenets/posts/Posts";
+import Comments from "./componenets/comments/Comments";
+import UserDetails from "./componenets/users/userDetails/UserDetails";
 
 function App() {
-
-    let [cars, setCars] = useState([]);
-    let [model, setModel] = useState('');
-    let [price, setPrice] = useState('');
-    let [year, setYear] = useState('');
-
-
-    const carInfo = {
-        model: model,
-        price: price,
-        year: year
-    }
-
-    const save = (e) => {
-        e.preventDefault()
-        createCar(carInfo)
-    }
-
-
-    useEffect(() => {
-        getCar().then(value => setCars([...value]))
-    }, [cars])
-
-    // console.log(cars)
-
-    let onModelChange = (e) => {
-        setModel(e.target.value)
-    };
-    let onPriceChange = (e) => {
-        setPrice(e.target.value)
-    };
-    let onYearChange = (e) => {
-        setYear(e.target.value)
-    };
-
     return (
-        <div className={'app'}>
-            <form onSubmit={save}>
-                <input type="text" name={'model'} placeholder={'Model'} onChange={onModelChange}/>
-                <input type="number" name={'price'} placeholder={'Price'} onChange={onPriceChange}/>
-                <input type="number" name={'year'} placeholder={'Year'} onChange={onYearChange}/>
-                <input type="submit" name={'submit'} value={'SAVE'}/>
-            </form>
+        <Router>
+            <div className={'menu-wrapper'}>
+                <Link to={'/users'}>Users</Link>
+                <Link to={'/posts'}>Posts</Link>
+                <Link to={'/comments'}>Comments</Link>
+            </div>
+            <Switch>
+                < Route path={`/users/:id`} render={(props) => {
+                    return <UserDetails {...props}/>
+                }}/>
+                <Route path={'/users'} component={Users}/>
+                <Route path={'/posts'} component={Posts}/>
+                <Route path={'/comments'} component={Comments}/>
+            </Switch>
 
-            <h1>CARS:</h1>
-            {
-                cars.map(value => <div key={value.id}>
-                    <h3>{value.id}. {value.model}</h3>
-                </div>)
-            }
-        </div>
-    );
+        </Router>
+    )
+
 }
 
 export default App;
