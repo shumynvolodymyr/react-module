@@ -8,6 +8,7 @@
 // Отримує posts з jsobplaceholder, виводить їх всі.
 //     Біля кожного поста зробити лінку (не конопку) яка буде вести на детальну інформацію поста. Детальну інформацію отримувати через history.state
 
+
 import './App.css';
 import {
     BrowserRouter as Router,
