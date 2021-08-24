@@ -8,7 +8,7 @@ export default function User({user, url}) {
 
 
     function navigatorToUser() {
-        history.push(url + '/' + user.id, user);
+        history.push(url + '/' + id, user);
     }
 
     return (

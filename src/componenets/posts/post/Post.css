@@ -1,0 +1,26 @@
+.post-box {
+    display: flex;
+    width: 46%;
+    border: 1px dashed #d6d6d6;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.postName-box {
+    width: 90%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#btnStyle2 {
+    margin: auto;
+    background: linear-gradient(#4db028, #b5fc00);
+    border-radius: 5px;
+    width: 10%;
+}
+
+#btnStyle2:hover {
+    background: linear-gradient(#b5fc00, #4db028);
+}

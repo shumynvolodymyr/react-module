@@ -19,6 +19,8 @@ import Users from "./componenets/users/Users";
 import Posts from "./componenets/posts/Posts";
 import Comments from "./componenets/comments/Comments";
 import UserDetails from "./componenets/users/userDetails/UserDetails";
+import PostDetails from "./componenets/posts/postDetails/PostDetails";
+import CommentDetails from "./componenets/comments/commentDetails/CommentDetails";
 
 function App() {
     return (
@@ -29,9 +31,19 @@ function App() {
                 <Link to={'/comments'}>Comments</Link>
             </div>
             <Switch>
+
                 < Route path={`/users/:id`} render={(props) => {
                     return <UserDetails {...props}/>
                 }}/>
+
+                <Route path={`/posts/:id`} render={(props) => {
+                    return <PostDetails {...props}/>
+                }}/>
+
+                <Route path={`/comments/:id`} render={(props) => {
+                    return <CommentDetails {...props}/>
+                }}/>
+
                 <Route path={'/users'} component={Users}/>
                 <Route path={'/posts'} component={Posts}/>
                 <Route path={'/comments'} component={Comments}/>
