@@ -1,24 +1,19 @@
 const reducer = (state, action) => {
-    switch (action.obj) {
+    switch (action.type) {
 
-        case 'a': {
-            switch (action.type) {
-                case '-': {return {...state, a: state.a--}}
-                case '+': {return {...state, a: state.a++}}
+        case '-': {
+            switch (action.obj) {
+                case 'a': {return {...state, a: state.a--}}
+                case 'b': {return {...state, b: state.b--}}
+                case 'c': {return {...state, c: state.c--}}
                 default: return state;
             }
         }
-        case 'b': {
-            switch (action.type) {
-                case '-': {return {...state, b: state.b--}}
-                case '+': {return {...state, b: state.b++}}
-                default: return state;
-            }
-        }
-        case 'c': {
-            switch (action.type) {
-                case '-': {return {...state, c: state.c--}}
-                case '+': {return {...state, c: state.c++}}
+        case '+': {
+            switch (action.obj) {
+                case 'a': {return {...state, a: state.a++}}
+                case 'b': {return {...state, b: state.b++}}
+                case 'c': {return {...state, c: state.c++}}
                 default: return state;
             }
         }
