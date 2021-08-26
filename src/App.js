@@ -18,6 +18,7 @@ function App() {
             <button id={'minus'} onClick={() => dispatch({type: '-'})}>-2</button>
             <h1>{state}</h1>
             <button id={'plus'} onClick={() => dispatch({type: '+'})}>+10</button>
+            <button onClick={()=>dispatch({type: 'reset'})}>RESET</button>
         </div>
     );
 }
