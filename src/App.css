@@ -1,0 +1,25 @@
+.wrapper{
+    display: flex;
+    border: 1px dashed silver;
+    width: fit-content;
+    margin: 10px;
+    padding: 5px;
+    background: lightgrey;
+}
+
+#plus {
+    width: 50px;
+font-size: 20px;
+ background: linear-gradient(#4db028, #264f17);
+}
+#minus {
+    width: 50px;
+    font-size: 20px;
+    background: linear-gradient(#ff3c00, #790404);
+}
+
+h1{
+    margin: 5px;
+    font-size: 30px;
+}
+
