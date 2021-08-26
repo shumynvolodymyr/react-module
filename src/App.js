@@ -19,7 +19,7 @@ function App() {
 
             <div className={'obj1'}>
                 <button onClick={() => {dispatch({ obj: 'a',type: '-'})}}>-</button>
-                <input name={'b'} type="text" value={a}/>
+                <input name={'a'} type="text" value={a}/>
                 <button onClick={() => {dispatch({ obj: 'a',type: '+'})}}>+</button>
             </div>
 
@@ -31,7 +31,7 @@ function App() {
 
             <div className={'obj3'}>
                 <button onClick={() => {dispatch({ obj: 'c',type: '-'})}}>-</button>
-                <input name={'b'} type="text" value={c}/>
+                <input name={'c'} type="text" value={c}/>
                 <button onClick={() => {dispatch({ obj: 'c',type: '+'})}}>+</button>
             </div>
 
