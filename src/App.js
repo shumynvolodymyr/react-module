@@ -10,7 +10,7 @@ import reducer from "./Reducer";
 
 function App() {
 
-    const initialCount = {a: 0, b: 0, c: 0}
+    const initialCount = {a: 0, b: 0, c: 0};
 
     let [{a, b, c}, dispatch] = useReducer(reducer, initialCount);
 
