@@ -19,19 +19,19 @@ function App() {
 
             <div className={'obj1'}>
                 <button onClick={() => {dispatch({ obj: 'a',type: '-'})}}>-</button>
-                <input name={'a'} type="text" value={a}/>
+                <input name={'a'} type="text" value={a} onChange={(e)=>{dispatch({obj: 'a' ,type:'change',newValueA:e.target.value})}}/>
                 <button onClick={() => {dispatch({ obj: 'a',type: '+'})}}>+</button>
             </div>
 
             <div className={'obj2'}>
                 <button onClick={() => {dispatch({ obj: 'b',type: '-'})}}>-</button>
-                <input name={'b'} type="text" value={b}/>
+                <input name={'b'} type="text" value={b} onChange={(e)=>{dispatch({obj: 'b' ,type:'change',newValueB:e.target.value})}}/>
                 <button onClick={() => {dispatch({ obj: 'b',type: '+'})}}>+</button>
             </div>
 
             <div className={'obj3'}>
                 <button onClick={() => {dispatch({ obj: 'c',type: '-'})}}>-</button>
-                <input name={'c'} type="text" value={c}/>
+                <input name={'c'} type="text" value={c} onChange={(e)=>{dispatch({obj: 'c' ,type:'change',newValueC:e.target.value})}}/>
                 <button onClick={() => {dispatch({ obj: 'c',type: '+'})}}>+</button>
             </div>
 

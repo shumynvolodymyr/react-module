@@ -1,4 +1,5 @@
 const reducer = (state, action) => {
+
     switch (action.type) {
 
         case '-': {
@@ -17,8 +18,17 @@ const reducer = (state, action) => {
                 default: return state;
             }
         }
+        case 'change': {
+            switch (action.obj) {
+                case 'a': {return {...state,a: action.newValueA}}
+                case 'b': {return {...state,b: action.newValueB}}
+                case 'c': {return {...state,c: action.newValueC}}
+            }
+        }
+break;
         default: return {...state};
     }
+
 
 }
 
