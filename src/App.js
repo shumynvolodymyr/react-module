@@ -16,13 +16,11 @@ function App() {
 
     const doneTask = (id) => {
         let searchDoneTask = state.filter(value => value.id === id)
-        searchDoneTask[0].done = true;
-        setState([...state, searchDoneTask]);
+        setState([...state, searchDoneTask[0].done = true]);
     }
     const deleteTask = (id) => {
         let searchDeleteTask = state.filter(value => value.id === id)
-        searchDeleteTask[0].done = false;
-        setState([...state, searchDeleteTask]);
+        setState([...state, searchDeleteTask[0].done = false]);
     }
 
 
