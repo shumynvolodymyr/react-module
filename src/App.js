@@ -6,8 +6,8 @@ import {clearStore, fetchUsers, pushUser} from "./redux/actions";
 
 function App() {
     let state = useSelector(state => state);
-    let dispatch = useDispatch();
     let {usersReducer:{users}} = state;
+    let dispatch = useDispatch();
     useEffect(() => {
         getUsers().then(value => dispatch(fetchUsers(value)))
     }, [dispatch])
