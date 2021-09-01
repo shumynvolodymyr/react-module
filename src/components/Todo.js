@@ -9,8 +9,13 @@ export default function Todo({todo, removeTask, toggleTask}) {
                 <p>Title: {title} .</p>
                 <p><i>Description: {description}.</i></p>
             </div>
-            <div className="item-delete" onClick={() => removeTask(id)}>
-                X
+            <div className={'item-icon'}>
+                <div className="item-delete" onClick={() => removeTask(id)}>
+                    &#10008;
+                </div>
+                <div className={'item-edit'}>
+                    &#9998;
+                </div>
             </div>
         </div>
     );
