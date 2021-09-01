@@ -1,0 +1,11 @@
+.rating {
+    position: absolute;
+    bottom: 2px;
+    left: 16px;
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+    color: gold;
+    width: 150px;
+    text-align: start;
+}

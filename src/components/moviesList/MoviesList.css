@@ -1,0 +1,32 @@
+.film-box {
+    position: relative;
+    background-color: #222;
+    display: block;
+    width: 210px;
+    height: 350px;
+    float: left;
+    margin: 2px;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 5px;
+    border: 1px solid #222;
+    color: #bbb;
+}
+
+.f-rate {
+    position: absolute;
+    bottom: 0px;
+    left: 7px;
+}
+
+.year {
+    position: absolute;
+    bottom: 2px;
+    left: 160px;
+    font-weight: bold;
+    font-size: 15px;
+    font-style: italic;
+    color: #bf090e;
+    width: 45px;
+    text-align: center;
+}
