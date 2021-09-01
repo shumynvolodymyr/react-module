@@ -15,14 +15,14 @@ function App() {
 
     const {MoviesReducer: {movies}, GenresReducer: {genres}} = state
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(getMovies());
         dispatch(getGenres());
-    },[dispatch])
+    }, [dispatch])
 
     return (
-        <div>
-            {genres.map((value,index) => <GenreBadge key={index} genres={value}/>)}
+        <div id={'container'}>
+            {genres.map((value, index) => <GenreBadge key={index} genres={value.genres}/>)}
             {movies.map((value, index) => <MoviesPage key={index} movies={value}/>)}
         </div>
     );
