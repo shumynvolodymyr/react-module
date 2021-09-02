@@ -1,5 +1,3 @@
-.genres {
- border: 1px dashed silver;
-    width: 95%;
-
+ul {
+    list-style: none;
 }

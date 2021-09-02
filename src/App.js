@@ -21,6 +21,7 @@ function App() {
     }, [dispatch])
 
     return (
+
         <div id={'container'}>
             {genres.map((value, index) => <GenreBadge key={index} genres={value.genres}/>)}
             {movies.map((value, index) => <MoviesPage key={index} movies={value}/>)}

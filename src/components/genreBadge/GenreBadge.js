@@ -5,7 +5,7 @@ export default function GenreBadge({genres}) {
         <div className={'genres'}>
             <ul>
                 {
-                    genres.map(value => <li>{value.name}</li>)
+                    genres.map(value => <li key={value.id}>{value.name}</li>)
                 }
             </ul>
         </div>
