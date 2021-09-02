@@ -13,10 +13,13 @@
     color: #bbb;
 }
 
+.film-box:hover {
+    background: #595959;
+}
+
 .f-rate {
     position: absolute;
-    bottom: 0px;
-    left: 7px;
+    bottom: 0;
 }
 
 .year {

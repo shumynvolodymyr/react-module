@@ -5,7 +5,7 @@ export default function MoviesPage({movies}) {
   const {results}= movies;
 
     return (
-        <div className={'container'}>
+        <div className={'movies-page'}>
             {results.map((value, index)=><MoviesList key={index} film={value}/>)}
         </div>
     );

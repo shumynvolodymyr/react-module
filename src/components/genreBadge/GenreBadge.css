@@ -1,3 +1,25 @@
-ul {
-    list-style: none;
+.genres-box {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    background-color: #222;
+    width: 99%;
+    margin: 2px;
+    text-align: center;
+    font-size: 13px;
+    padding-top: 5px;
+    border: 1px solid #222;
+    color: #bbb;
+}
+
+.genres {
+    border: 1px solid #bbb;
+    margin: 3px;
+    padding: 4px;
+    width: 18%;
+}
+
+.genres:hover {
+    background: #595959;
 }

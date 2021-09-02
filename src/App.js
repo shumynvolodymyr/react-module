@@ -22,7 +22,7 @@ function App() {
 
     return (
 
-        <div id={'container'}>
+        <div className={'container'}>
             {genres.map((value, index) => <GenreBadge key={index} genres={value.genres}/>)}
             {movies.map((value, index) => <MoviesPage key={index} movies={value}/>)}
         </div>

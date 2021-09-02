@@ -2,12 +2,10 @@ import './GenreBadge.css'
 
 export default function GenreBadge({genres}) {
     return (
-        <div className={'genres'}>
-            <ul>
+        <div className={'genres-box'}>
                 {
-                    genres.map(value => <li key={value.id}>{value.name}</li>)
+                    genres.map(value => <div className={'genres'} key={value.id}>{value.name}</div>)
                 }
-            </ul>
         </div>
     );
 }
