@@ -1,7 +1,6 @@
 import {useHistory} from "react-router";
 import './MoviesListCard.css'
 import {ImageBuilder} from "../../myFunc/ImageBuilder";
-import {Button} from "bootstrap";
 
 export default function MoviesListCard() {
 
