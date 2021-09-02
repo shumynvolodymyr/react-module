@@ -1,5 +1,19 @@
-.movies-page input {
-    text-align: center;
-    width: 10%;
+#paginationForm {
+    display: inline-flex;
+justify-content: center;
+    padding: 5px;
+    width: 100%;
 }
 
+#paginationForm input {
+    width: 10%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.movies-page {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

@@ -1,32 +1,28 @@
 import './App.css';
-import MoviesPage from "./components/moviesPage/MoviesPage";
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {getMovies} from "./services/movies.api";
-import {getGenres} from "./services/genres.api";
-import GenreBadge from "./components/genreBadge/GenreBadge";
+import {
+    BrowserRouter as Router,
+    Route,
+    Link, Switch,
+} from "react-router-dom";
+import MoviesListCard from "./components/moviesListCard/MoviesListCard";
+import HomePage from "./components/homePage/HomePage";
 
 function App() {
 
-    const state = useSelector(state => state);
-    const dispatch = useDispatch()
-
-    console.log(state);
-
-    const {MoviesReducer: {movies}, GenresReducer: {genres}} = state
-
-    useEffect(() => {
-        dispatch(getMovies());
-        dispatch(getGenres());
-    }, [dispatch])
-
     return (
+        <Router>
 
-        <div className={'container'}>
-            {genres.map((value, index) => <GenreBadge dispatch={dispatch} key={index} genres={value.genres}/>)}
-            {movies.map((value, index) => <MoviesPage dispatch={dispatch} key={index} movies={value}/>)}
-        </div>
-    );
+            <div>
+                <Link to={'/'}/>
+
+            </div>
+            <Switch>
+                <Route path={'/:id'} component={MoviesListCard}/>
+                <Route path={'/'} component={HomePage}/>
+
+            </Switch>
+        </Router>
+    )
 }
 
 export default App;

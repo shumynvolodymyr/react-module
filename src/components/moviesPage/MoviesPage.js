@@ -1,6 +1,7 @@
 import MoviesList from "../moviesList/MoviesList";
 import './MoviesPage.css'
 import {getMoviesPage} from "../../services/movies.api";
+import {Button, Input} from 'reactstrap';
 
 export default function MoviesPage({movies, dispatch}) {
     const {results, page, total_pages} = movies;
@@ -31,10 +32,12 @@ export default function MoviesPage({movies, dispatch}) {
 
             {results.map((value, index) => <MoviesList key={index} film={value}/>)}
 
+            {/*todo доробити для пагінації із вибором номеру сторінки*/}
+
             <form onClick={stopPrevDef} id={'paginationForm'}>
-                <button onClick={prevPage}>Prev page</button>
-                <input type="number" value={page} onChange={changePage}/>
-                <button onClick={nextPage}>Next page</button>
+                <Button color={'secondary'} onClick={prevPage}>&#9665;</Button>
+                <Input type="number" value={page} onChange={changePage}/>
+                <Button color={'secondary'} onClick={nextPage}>&#9655;</Button>
             </form>
         </div>
     );

@@ -1,4 +1,4 @@
-.film-box {
+#film-box {
     position: relative;
     background-color: #222;
     display: block;
@@ -11,9 +11,10 @@
     padding-top: 5px;
     border: 1px solid #222;
     color: #bbb;
+    text-decoration: none;
 }
 
-.film-box:hover {
+#film-box:hover {
     background: #595959;
 }
 

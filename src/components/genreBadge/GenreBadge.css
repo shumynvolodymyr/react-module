@@ -1,10 +1,9 @@
 .genres-box {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative;
     background-color: #222;
-    width: 99%;
+    width: 82%;
     margin: 2px;
     text-align: center;
     font-size: 13px;
