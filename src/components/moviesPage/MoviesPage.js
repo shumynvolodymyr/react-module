@@ -30,6 +30,7 @@ export default function MoviesPage({movies, dispatch}) {
         <div className={'movies-page'}>
 
             {results.map((value, index) => <MoviesList key={index} film={value}/>)}
+
             <form onClick={stopPrevDef} id={'paginationForm'}>
                 <button onClick={prevPage}>Prev page</button>
                 <input type="number" value={page} onChange={changePage}/>

@@ -23,7 +23,7 @@ function App() {
     return (
 
         <div className={'container'}>
-            {genres.map((value, index) => <GenreBadge key={index} genres={value.genres}/>)}
+            {genres.map((value, index) => <GenreBadge dispatch={dispatch} key={index} genres={value.genres}/>)}
             {movies.map((value, index) => <MoviesPage dispatch={dispatch} key={index} movies={value}/>)}
         </div>
     );
