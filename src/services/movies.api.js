@@ -1,5 +1,5 @@
 import {setMovies} from "../redux/actions/ActionsCreator";
-import {apiKey, configMovies, url} from "./config";
+import {apiKey, configMovies, page, url} from "./config";
 
 const getMovies = () => async (dispatch) => {
     dispatch(setMovies(await (await fetch(url + configMovies, {
@@ -10,4 +10,13 @@ const getMovies = () => async (dispatch) => {
 
 }
 
-export {getMovies}
+const getMoviesPage = (pageNumber) => async (dispatch) => {
+    dispatch(setMovies(await (await fetch(url + configMovies + page + `${pageNumber}`, {
+        headers: {
+            Authorization: `Bearer ${apiKey}`
+        }
+    })).json()));
+
+}
+
+export {getMovies, getMoviesPage}
