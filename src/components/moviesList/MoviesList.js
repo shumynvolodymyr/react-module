@@ -9,8 +9,6 @@ export default function MoviesList({film}) {
 
     const {id, title, vote_average, release_date} = film;
 
-    const year = release_date.slice(0, 4)
-
     return (
         <Link to={{pathname: `/${id}`, state: film}} id={'film-box'}>
             <PosterPreview film={film}/>
@@ -19,7 +17,7 @@ export default function MoviesList({film}) {
                 <StarsRating vote_average={vote_average}/>
             </div>
             <div className={'year'}>
-                {year}
+                {release_date ? release_date.substr(0, 4) : release_date}
             </div>
         </Link>
     );

@@ -1,4 +1,4 @@
-import GenreBadge from "../genreBadge/GenreBadge";
+import Genre from "../genre/Genre";
 import MoviesPage from "../moviesPage/MoviesPage";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
@@ -21,7 +21,7 @@ export default function HomePage() {
 
     return (
         <div className={'container'}>
-            {genres.map((value, index) => <GenreBadge dispatch={dispatch} key={index} genres={value.genres}/>)}
+            {genres.map((value, index) => <Genre dispatch={dispatch} key={index} genres={value.genres}/>)}
             {movies.map((value, index) => <MoviesPage dispatch={dispatch} key={index} movies={value}/>)}
         </div>
     );

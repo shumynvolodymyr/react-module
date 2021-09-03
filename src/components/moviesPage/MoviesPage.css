@@ -1,17 +1,3 @@
-#paginationForm {
-    display: inline-flex;
-    justify-content: center;
-    width: 30%;
-    height: 40px;
-    margin: 10px;
-}
-
-#paginationForm input {
-    width: 30%;
-    text-align: center;
-    font-size: 16px;
-}
-
 .movies-page {
     width: 90%;
     display: flex;
@@ -19,8 +5,12 @@
     justify-content: center;
 }
 
+.pagination-box {
+    width: 100%;
+}
 .pages {
     margin: 20px 0;
+    padding-left: 4%;
     width: 70%;
 }
 
@@ -40,4 +30,20 @@
 .pagination-box {
 display: flex;
 }
+
+#paginationForm {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 40px;
+    margin: 10px;
+}
+
+#paginationForm input {
+    width: 50%;
+    text-align: center;
+    font-size: 16px;
+}
+
+
 

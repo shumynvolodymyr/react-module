@@ -1,9 +1,17 @@
 import {useHistory} from "react-router";
 import './MoviesListCard.css'
 import {ImageBuilder} from "../../myFunc/ImageBuilder";
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {getMovieVideos} from "../../services/movies.api";
+import MovieIdVideos from "./MovieIdVideos";
+import {getGenres} from "../../services/genres.api";
 
 export default function MoviesListCard() {
 
+    const movieIdVideos = useSelector(state => state.MoviesReducer.movieIdVideos);
+    const genres = useSelector(state => state.GenresReducer.genres);
+    const dispatch = useDispatch();
     const history = useHistory();
     const {
         location: {
@@ -12,16 +20,33 @@ export default function MoviesListCard() {
                 original_title,
                 release_date,
                 genre_ids,
-                overview
+                overview,
+                id
             }
         }
     } = history;
 
-    console.log(history);
+    useEffect(() => {
+        dispatch(getMovieVideos(id));
+        dispatch(getGenres())
+    }, [id, dispatch])
+
+    let genresArr = [];
+    const searchGenge = (genre_ids) => {
+        for (let i = 0; i < genre_ids.length; i++) {
+            genres.map(value => {
+                let gnr = value.genres.filter(genre => genre.id === genre_ids[i])
+                genresArr.push(gnr)
+            })
+
+        }
+    }
+    searchGenge(genre_ids)
+    console.log(genresArr); //todo довести до ума
 
     return (
         <>
-            <button className={'goBack'} onClick={()=>history.goBack()}>Back</button>
+            <button className={'goBack'} onClick={() => history.goBack()}>Back</button>
             <div id={'face'}>
                 <img className={'img'} src={ImageBuilder(poster_path, 300)} alt=""/>
                 <div className={'t-row'}>
@@ -44,6 +69,9 @@ export default function MoviesListCard() {
                     </div>
                 </div>
             </div>
+            {
+                movieIdVideos.map((value, i) => <MovieIdVideos key={i} results={value.results}/>)
+            }
         </>
     );
 }

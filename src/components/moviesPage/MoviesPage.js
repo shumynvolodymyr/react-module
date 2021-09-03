@@ -1,16 +1,15 @@
 import MoviesList from "../moviesList/MoviesList";
 import './MoviesPage.css'
 import {getMoviesPage} from "../../services/movies.api";
-import {Button, Input} from 'reactstrap';
+import {Button} from 'reactstrap';
 import {useEffect} from "react";
-import {pageCreator} from "../../myFunc/pageCreator";
+import {pageCreator} from "../../myFunc/PageCreator";
 
 export default function MoviesPage({movies, dispatch}) {
 
-
     const {results, page, total_pages} = movies;
-    const pages = []
-    pageCreator(pages, total_pages, page)
+    const pages = [];
+    pageCreator(pages, total_pages, page);
     useEffect(() => {
         dispatch(getMoviesPage(page))
     }, [dispatch, page])
@@ -27,7 +26,7 @@ export default function MoviesPage({movies, dispatch}) {
     }
 
     const changePage = (e) => {
-        if (e.target.value <= total_pages && e.target.value !== 1) {
+        if (e.target.value <= total_pages && e.target.value >= 1) {
             dispatch(getMoviesPage(e.target.value));
             console.log(e.target.value);
         }
@@ -52,7 +51,7 @@ export default function MoviesPage({movies, dispatch}) {
                 </div>
                 <form onClick={stopPrevDef} id={'paginationForm'}>
                     <Button color={'secondary'} onClick={prevPage}>&#9665;</Button>
-                    <Input type="number" value={page} onChange={changePage}/>
+                    <input min={1} max={total_pages} type="number" value={page} onChange={changePage}/>
                     <Button color={'secondary'} onClick={nextPage}>&#9655;</Button>
                 </form>
             </div>

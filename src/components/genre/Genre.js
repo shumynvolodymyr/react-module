@@ -1,7 +1,7 @@
-import './GenreBadge.css'
+import './Genre.css'
 import {getMovieWithGenres} from "../../services/movies.api";
 
-export default function GenreBadge({genres, dispatch}) {
+export default function Genre({genres, dispatch}) {
 
 
     return (
