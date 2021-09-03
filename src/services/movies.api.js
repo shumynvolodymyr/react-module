@@ -1,4 +1,4 @@
-import {setMovies} from "../redux/actions/ActionsCreator";
+import {setCurrentPage, setMovies} from "../redux/actions/ActionsCreator";
 import {apiKey, configMovies, page, url, withGenres} from "./config";
 
 const getMovies = () => async (dispatch) => {
@@ -11,7 +11,7 @@ const getMovies = () => async (dispatch) => {
 }
 
 const getMoviesPage = (pageNumber) => async (dispatch) => {
-    dispatch(setMovies(await (await fetch(url + configMovies + page + `${pageNumber}`, {
+    dispatch(setCurrentPage(await (await fetch(url + configMovies + page + `${pageNumber}`, {
         headers: {
             Authorization: `Bearer ${apiKey}`
         }

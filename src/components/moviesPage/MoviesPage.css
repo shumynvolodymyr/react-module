@@ -1,12 +1,12 @@
 #paginationForm {
     display: inline-flex;
-justify-content: center;
+    justify-content: center;
     padding: 5px;
-    width: 100%;
+    width: 30%;
 }
 
 #paginationForm input {
-    width: 10%;
+    width: 30%;
     text-align: center;
     font-size: 16px;
 }
@@ -17,3 +17,27 @@ justify-content: center;
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.pages {
+    margin: 20px 0;
+    width: 70%;
+}
+
+.page, .current-page{
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    padding: 5px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.current-page {
+    border: 2px solid gray;
+    font-weight: 700;
+}
+
+.pagination-box {
+display: flex;
+
+}
+
