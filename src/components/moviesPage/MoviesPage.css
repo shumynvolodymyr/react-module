@@ -1,8 +1,9 @@
 #paginationForm {
     display: inline-flex;
     justify-content: center;
-    padding: 5px;
     width: 30%;
+    height: 40px;
+    margin: 10px;
 }
 
 #paginationForm input {
@@ -38,6 +39,5 @@
 
 .pagination-box {
 display: flex;
-
 }
 
