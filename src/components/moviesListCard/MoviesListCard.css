@@ -8,37 +8,48 @@
     border: 2px solid #252525;
 }
 
-.row {
-    margin-top: 9px;
-    width: 413px;
-    margin-left: 221px;
-    min-height: 315px;
+.t-row {
+
 }
 
 .r-1 {
-    min-height: 20px;
-    padding: 8px 10px;
+    display: flex;
 }
 
 .r-2 {
-    min-height: 20px;
-    padding: 9px 10px;
+    display: flex;
 }
 
-.rl-1 {
-    width: 150px;
-    float: left;
-    margin-top: 2px;
+.r1-1 {
+    margin: auto;
+    width: 13%;
+    text-shadow: 1px 1px #c60;
+
 }
 
-.rl-2 {
-    color: #dadada;
-    width: 245px;
-    margin-left: 150px;
+.r1-2 {
+    width: 87%;
 }
+.overview-box {
+    width: 13%;
+    text-shadow: 1px 1px #c60;
+}
+
+#Badge {
+    border: 2px solid #252525;
+    margin: 2px;
+    color: gold;
+    text-shadow: 1px 1px #c60;
+    background: linear-gradient(#acafb4, #464a4d);
+}
+
+#Badge:hover {
+    background: linear-gradient(#464a4d, #acafb4);
+}
+
 
 .goBack {
-    background: linear-gradient(#acafb4,#464a4d);
+    background: linear-gradient(#acafb4, #464a4d);
     border-color: #464a4d;
     display: inline-block;
     font-weight: 400;
@@ -56,6 +67,6 @@
     margin: 10px;
 }
 
-.goBack:hover{
+.goBack:hover {
     background: linear-gradient(#464a4d, #acafb4);
 }

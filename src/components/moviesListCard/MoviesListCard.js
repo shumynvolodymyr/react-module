@@ -6,6 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getMovieVideos} from "../../services/movies.api";
 import MovieIdVideos from "./MovieIdVideos";
 import {getGenres} from "../../services/genres.api";
+import {Badge} from "reactstrap";
 
 export default function MoviesListCard() {
 
@@ -16,7 +17,7 @@ export default function MoviesListCard() {
     const {
         location: {
             state: {
-                poster_path,
+                backdrop_path,
                 original_title,
                 release_date,
                 genre_ids,
@@ -32,23 +33,22 @@ export default function MoviesListCard() {
     }, [id, dispatch])
 
     let genresArr = [];
-    const searchGenge = (genre_ids) => {
+    const searchGenges = (genre_ids) => {
         for (let i = 0; i < genre_ids.length; i++) {
             genres.map(value => {
-                let gnr = value.genres.filter(genre => genre.id === genre_ids[i])
-                genresArr.push(gnr)
+                let genre = value.genres.filter((genre) => genre.id===genre_ids[i]);
+                genresArr.push(genre[0]);
             })
 
         }
     }
-    searchGenge(genre_ids)
-    console.log(genresArr); //todo довести до ума
+    searchGenges(genre_ids)
 
     return (
         <>
             <button className={'goBack'} onClick={() => history.goBack()}>Back</button>
             <div id={'face'}>
-                <img className={'img'} src={ImageBuilder(poster_path, 300)} alt=""/>
+                <img className={'img'} src={ImageBuilder(backdrop_path, 300)} alt=""/>
                 <div className={'t-row'}>
                     <div className={'r-1'}>
                         <div className={'r1-1'}>Original title:</div>
@@ -56,17 +56,24 @@ export default function MoviesListCard() {
                     </div>
                     <div className={'r-2'}>
                         <div className={'r1-1'}>Release date:</div>
-                        <div className={'r1-2'}><h3>{release_date}</h3></div>
+                        <div className={'r1-2'}><h5>{release_date}</h5></div>
                     </div>
 
                     <div className={'r-1'}>
                         <div className={'r1-1'}>Genre:</div>
-                        <div className={'r1-2'}><h3>{genre_ids}</h3></div>
+                        <div className={'r1-2'}>{genresArr.map((value,index) =>
+                            <Badge
+                                key={index}
+                                id={'Badge'}
+                            >
+                                {value.name}
+                            </Badge>)}
+                        </div>
                     </div>
-                    <div className={'r-2'}>
-                        <div className={'r1-1'}>Overview:</div>
-                        <div className={'r1-2'}><h4><i>{overview}</i></h4></div>
-                    </div>
+                    {overview && <div className={'r-2'}>
+                        <div className={'overview-box'}>Overview:</div>
+                        <p className={'r1-2'}><i>{overview}</i></p>
+                    </div>}
                 </div>
             </div>
             {
