@@ -10,14 +10,15 @@
     padding-top: 5px;
     border: 1px solid #222;
     color: #bbb;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .genres {
     border: 1px solid #bbb;
     margin: 3px;
     padding: 4px;
-    width: 18%;
+    width: 19%;
+    border-radius: 5px;
 }
 
 .genres:hover {

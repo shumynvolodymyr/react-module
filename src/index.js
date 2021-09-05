@@ -6,13 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import {store} from "./redux/store/store";
 import {Provider} from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "./components/header/Header";
 
 
 ReactDOM.render(
 
     <React.StrictMode>
             <Provider store={store}>
+   <>
+       <Header/>
 <App/>
+   </>
             </Provider>
     </React.StrictMode>,
     document.getElementById('root')
