@@ -10,8 +10,6 @@ export default function HomePage() {
     const state = useSelector(state => state);
     const dispatch = useDispatch()
 
-    console.log(state);
-
     const {MoviesReducer: {movies}, GenresReducer: {genres}} = state
 
     useEffect(() => {
