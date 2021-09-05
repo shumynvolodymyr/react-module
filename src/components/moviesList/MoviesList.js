@@ -10,7 +10,7 @@ export default function MoviesList({film}) {
     const {id, title, vote_average, release_date} = film;
 
     return (
-        <Link to={{pathname: `/${id}`, state: film}} id={'film-box'}>
+        <Link to={{pathname: `/movie/${id}`, state: film}} id={'film-box'}>
             <PosterPreview film={film}/>
             <span>{title}</span>
             <div className={'f-rate'}>

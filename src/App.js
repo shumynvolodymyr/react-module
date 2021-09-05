@@ -17,7 +17,7 @@ function App() {
 
             </div>
             <Switch>
-                <Route path={'/:id'} component={MoviesListCard}/>
+                <Route path={'/movie/:id'} component={MoviesListCard}/>
                 <Route path={'/'} component={HomePage}/>
 
             </Switch>
