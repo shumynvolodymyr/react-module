@@ -38,10 +38,11 @@ export default function MoviesListCard() {
             let genre = genres.map(value => {
                 return value.genres.filter((genre) => genre.id === genre_ids[i]);
             });
-            genresArr.push(genre[0]);
+            genresArr.push(genre[0][0]);
         }
     };
     searchGenges(genre_ids);
+
 
     return (
         <>
