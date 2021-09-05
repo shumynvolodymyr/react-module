@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getMovies} from "../../services/movies.api";
 import {getGenres} from "../../services/genres.api";
-import {Route} from "react-router-dom";
 
 export default function HomePage() {
 
@@ -24,7 +23,6 @@ export default function HomePage() {
         <div className={'container'}>
             {genres.map((value, index) => <Genre dispatch={dispatch} key={index} genres={value.genres}/>)}
             {movies.map((value, index) => <MoviesPage dispatch={dispatch} key={index} movies={value}/>)}
-            <Route path={'/'} component={HomePage}/>
         </div>
     );
 }
