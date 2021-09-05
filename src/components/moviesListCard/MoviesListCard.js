@@ -27,6 +27,7 @@ export default function MoviesListCard() {
         }
     } = history;
 
+
     useEffect(() => {
         dispatch(getMovieVideos(id));
         dispatch(getGenres())
@@ -35,14 +36,13 @@ export default function MoviesListCard() {
     let genresArr = [];
     const searchGenges = (genre_ids) => {
         for (let i = 0; i < genre_ids.length; i++) {
-            let genre = genres.map(value => {
-                return value.genres.filter((genre) => genre.id === genre_ids[i]);
+            genres.map(value => {
+                let genre = value.genres.filter(data => data.id === genre_ids[i])
+                genresArr.push(genre[0]);
             });
-            genresArr.push(genre[0][0]);
         }
     };
     searchGenges(genre_ids);
-
 
     return (
         <>

@@ -28,7 +28,6 @@ export default function MoviesPage({movies, dispatch}) {
     const changePage = (e) => {
         if (e.target.value <= total_pages && e.target.value >= 1) {
             dispatch(getMoviesPage(e.target.value));
-            console.log(e.target.value);
         }
     }
     const stopPrevDef = (e) => {

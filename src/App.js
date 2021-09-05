@@ -1,27 +1,23 @@
 import './App.css';
 import {
-    BrowserRouter as Router,
     Route,
-    Link, Switch,
+    Switch,
 } from "react-router-dom";
 import MoviesListCard from "./components/moviesListCard/MoviesListCard";
 import HomePage from "./components/homePage/HomePage";
+import Layout from "./components/layout/Layout";
 
 function App() {
 
     return (
-        <Router>
-
-            <div>
-                <Link to={'/'}/>
-
-            </div>
+        <Layout>
             <Switch>
                 <Route path={'/movie/:id'} component={MoviesListCard}/>
                 <Route path={'/'} component={HomePage}/>
 
             </Switch>
-        </Router>
+        </Layout>
+
     )
 }
 
