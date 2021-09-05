@@ -1,5 +1,6 @@
 import {useEffect} from "react";
 import darkstyles from "../Theme/darkstyles";
+import "./Header.css"
 
 export default function Header() {
 
@@ -20,18 +21,19 @@ export default function Header() {
 
 
     return (
-        <div>
-
-            <button onClick={() => {
-                window.localStorage.setItem('theme', 'light')
-                window.location.reload();
-            }}>go light
-            </button>
-            <button onClick={() => {
-                window.localStorage.setItem('theme', 'dark')
-                window.location.reload();
-            }}>go dark
-            </button>
+        <div className={'container'}>
+            <input type="checkbox" id={"switch1"} className={'switch'}/>
+            <label className="switch-for" for="switch1"> Dark</label>
+            {/*<button onClick={() => {*/}
+            {/*    window.localStorage.setItem('theme', 'light')*/}
+            {/*    window.location.reload();*/}
+            {/*}}>go light*/}
+            {/*</button>*/}
+            {/*<button onClick={() => {*/}
+            {/*    window.localStorage.setItem('theme', 'dark')*/}
+            {/*    window.location.reload();*/}
+            {/*}}>go dark*/}
+            {/*</button>*/}
 
         </div>
     );

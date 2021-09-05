@@ -1,0 +1,45 @@
+
+.container {
+    width: 500px;
+    margin:40px;
+}
+
+.switch-for {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 25px;
+    position: relative;
+    top: -35px;
+}
+
+.switch-for:after {
+    content: '';
+    width: 50px;
+    height: 25px;
+    background-color: green;
+    border: 1px solid #000;
+    border-radius: 15px;
+    position: absolute;
+    right: -62px;
+}
+
+.switch-for:before {
+    content: '';
+    width: 19px;
+    height: 19px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: -35px;
+    top: 3px;
+    z-index: 1;
+    transition-duration: 300ms;
+}
+
+.switch {
+    display: none;
+}
+
+.switch:checked + .switch-for::before {
+    right: -58px;
+}
