@@ -36,7 +36,7 @@ export default function MoviesListCard() {
     const searchGenges = (genre_ids) => {
         for (let i = 0; i < genre_ids.length; i++) {
             genres.map(value => {
-                let genre = value.genres.filter((genre) => genre.id===genre_ids[i]);
+                let genre = value.genres.filter((genre) => genre.id === genre_ids[i]);
                 genresArr.push(genre[0]);
             })
 
@@ -61,7 +61,7 @@ export default function MoviesListCard() {
 
                     <div className={'r-1'}>
                         <div className={'r1-1'}>Genre:</div>
-                        <div className={'r1-2'}>{genresArr.map((value,index) =>
+                        <div className={'r1-2'}>{genresArr.map((value, index) =>
                             <Badge
                                 key={index}
                                 id={'Badge'}
