@@ -41,5 +41,5 @@
 }
 
 .switch:checked + .switch-for::before {
-    right: -58px;
+    transform: scale(-1) translate(-120%, 0%);
 }

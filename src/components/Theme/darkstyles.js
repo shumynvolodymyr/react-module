@@ -2,13 +2,16 @@ const darkstyles = `
 
 html {
     background-color: #181a1b !important;
+    transition-duration: 500ms;
 }
 html, body, input, textarea, select, button {
     background-color: #181a1b;
+
 }
 html, body, input, textarea, select, button {
     border-color: #736b5e;
     color: #e8e6e3;
+
 }
 a {
     color: #3391ff;
@@ -82,6 +85,7 @@ body {
     rgba(0, 0, 204, 0.8),
     rgba(0, 0, 204, 0) 70.71%);
     background-color: initial;
+    transition-duration: 500ms;
 }
 .img {
     border-color: rgb(128, 119, 105);
@@ -2714,5 +2718,4 @@ a[href="https://coinmarketcap.com/"] > svg[width="94"][height="16"] > path {
 }
 
 `
-
 export default darkstyles;
