@@ -14,10 +14,8 @@ function App() {
             <Switch>
                 <Route path={'/movie/:id'} component={MoviesListCard}/>
                 <Route path={'/'} component={HomePage}/>
-
             </Switch>
         </Layout>
-
     )
 }
 

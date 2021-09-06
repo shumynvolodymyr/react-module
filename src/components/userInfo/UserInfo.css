@@ -1,6 +1,7 @@
 .registration img {
     width: 60px;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .registration {
