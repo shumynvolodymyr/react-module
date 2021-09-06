@@ -8,7 +8,7 @@ export default function Modal(props) {
                 <div className={'modal_close'} onClick={props.onModalClose}>&#x274E;</div>
                 <Input type={'text'} name={'login'} placeholder={'login'}/>
                 <Input type={'password'} name={'password'} placeholder={'password'}/>
-                <button id={'btn'} type={'submit'}>ENTER</button>
+                <button id={'btn'} type={'submit'} onClick={()=>alert('Loading...')}>ENTER</button>
                 Welcome!!!
                 <hr/>
                 {props.children}
