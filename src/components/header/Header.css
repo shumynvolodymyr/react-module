@@ -1,2 +1,13 @@
+.header {
+    border-bottom: 2px solid #b53600;
+    margin-bottom: 7px;
+    height: 100px;
+    display: flex;
+}
 
-
+.logo {
+    width: 300px;
+height: 150px;
+    position: relative;
+    top: -38px;
+}
