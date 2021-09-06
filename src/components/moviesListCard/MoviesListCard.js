@@ -34,7 +34,7 @@ export default function MoviesListCard() {
     }, [id, dispatch])
 
     let genresArr = [];
-    const searchGenges = (genre_ids) => {
+    const searchGenres = (genre_ids) => {
         for (let i = 0; i < genre_ids.length; i++) {
             genres.map(value => {
                 let genre = value.genres.filter(data => data.id === genre_ids[i])
@@ -42,7 +42,7 @@ export default function MoviesListCard() {
             });
         }
     };
-    searchGenges(genre_ids);
+    searchGenres(genre_ids);
 
     return (
         <>
