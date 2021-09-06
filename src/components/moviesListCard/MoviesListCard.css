@@ -30,6 +30,7 @@
 .r1-2 {
     width: 87%;
 }
+
 .overview-box {
     width: 13%;
     text-shadow: 1px 1px #c60;
@@ -42,6 +43,12 @@
     text-shadow: 1px 1px #c60;
     background: linear-gradient(#acafb4, #464a4d);
 }
+
+#Badge a {
+    text-decoration: none;
+    color: #a5a5a5
+}
+
 
 #Badge:hover {
     background: linear-gradient(#464a4d, #acafb4);

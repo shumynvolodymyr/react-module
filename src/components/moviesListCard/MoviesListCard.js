@@ -7,6 +7,9 @@ import {getMovieVideos} from "../../services/movies.api";
 import MovieIdVideos from "./MovieIdVideos";
 import {getGenres} from "../../services/genres.api";
 import {Badge} from "reactstrap";
+import {
+    Link
+} from "react-router-dom";
 
 export default function MoviesListCard() {
 
@@ -66,7 +69,7 @@ export default function MoviesListCard() {
                                 key={index}
                                 id={'Badge'}
                             >
-                                {value.name}
+                                <Link to={`/${value.name}`}>{value.name}</Link>
                             </Badge>)}
                         </div>
                     </div>
