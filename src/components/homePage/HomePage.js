@@ -19,8 +19,8 @@ export default function HomePage() {
 
     return (
         <div className={'container'}>
-            {genres.map((value, index) => <Genre dispatch={dispatch} key={index} genres={value.genres}/>)}
-            {movies.map((value, index) => <MoviesPage dispatch={dispatch} key={index} movies={value}/>)}
+            {genres.map((value, index) => <Genre key={index} genres={value.genres}/>)}
+            {movies.map((value, index) => <MoviesPage key={index} movies={value}/>)}
         </div>
     );
 }

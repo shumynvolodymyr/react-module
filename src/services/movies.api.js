@@ -6,8 +6,8 @@ const getMovies = () => async (dispatch) => {
 
 }
 
-const getMoviesPage = (pageNumber) => async (dispatch) => {
-    dispatch(setCurrentPage(await (await fetch(url + configMovies + page + `${pageNumber}`, headersAuthorization)).json()));
+const getMoviesPage = (pageNumber, idGenres) => async (dispatch) => {
+    dispatch(setCurrentPage(await (await fetch(url + configMovies + page + `${pageNumber}` + withGenres + idGenres, headersAuthorization)).json()));
 
 }
 

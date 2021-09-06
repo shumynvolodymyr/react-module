@@ -2,17 +2,7 @@
     position: absolute;
     bottom: 2px;
     left: 5px;
-    font-weight: bold;
     font-size: 15px;
-    font-style: italic;
-    color: gold;
-    width: 150px;
+    width: 165px;
     text-align: start;
-    text-shadow: 1px 1px #c60;
-}
-
-.vote_average {
-    margin-left: 3px;
-    color: #bf090e;
-    text-shadow: none;
 }

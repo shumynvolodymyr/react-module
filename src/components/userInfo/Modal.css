@@ -5,6 +5,7 @@
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     padding: 50px;
+    z-index: 1;
 
 }
 

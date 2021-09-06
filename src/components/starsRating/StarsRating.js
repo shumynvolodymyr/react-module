@@ -1,15 +1,11 @@
 import "./StarsRating.css"
-import {starCreator} from "../../myFunc/StarCreator";
+import {RatingView} from "react-simple-star-rating";
 
 export default function StarsRating({vote_average}) {
 
-    let stars = [];
-    starCreator(vote_average, stars);
-
     return (
         <div className={'rating'}>
-            {stars} <span className={'vote_average'}>{vote_average}</span>
+            <RatingView size={15} ratingValue={vote_average} stars={10}/>
         </div>
     );
 }
-

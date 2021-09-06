@@ -2,32 +2,32 @@ import MoviesList from "../moviesList/MoviesList";
 import './MoviesPage.css'
 import {getMoviesPage} from "../../services/movies.api";
 import {Button} from 'reactstrap';
-import {useEffect} from "react";
 import {pageCreator} from "../../myFunc/PageCreator";
+import {useDispatch, useSelector} from "react-redux";
 
-export default function MoviesPage({movies, dispatch}) {
+export default function MoviesPage({movies}) {
 
+    const dispatch = useDispatch();
+    const genreId = useSelector(state => state.GenresReducer.genreId);
     const {results, page, total_pages} = movies;
     const pages = [];
+
     pageCreator(pages, total_pages, page);
-    useEffect(() => {
-        dispatch(getMoviesPage(page))
-    }, [dispatch, page])
 
     const prevPage = () => {
         if (page !== 1) {
-            dispatch(getMoviesPage(page - 1));
+            dispatch(getMoviesPage(page - 1, genreId));
         }
     }
     const nextPage = () => {
         if (page < total_pages) {
-            dispatch(getMoviesPage(page + 1));
+            dispatch(getMoviesPage(page + 1, genreId));
         }
     }
 
     const changePage = (e) => {
         if (e.target.value <= total_pages && e.target.value >= 1) {
-            dispatch(getMoviesPage(e.target.value));
+            dispatch(getMoviesPage(e.target.value, genreId));
         }
     }
     const stopPrevDef = (e) => {
@@ -45,7 +45,7 @@ export default function MoviesPage({movies, dispatch}) {
                         <span
                             key={index}
                             className={page === num ? "current-page" : 'page'}
-                            onClick={() => dispatch(getMoviesPage(num))}>{num}</span>
+                            onClick={() => dispatch(getMoviesPage(num, genreId))}>{num}</span>
                     )}
                 </div>
                 <form onClick={stopPrevDef} id={'paginationForm'}>

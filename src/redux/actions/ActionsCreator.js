@@ -1,4 +1,11 @@
-import {ADD_GENRES, ADD_MOVIES, SET_CURRENT_PAGE, SET_MODAL_STATUS, SET_MOVIE_VIDEOS} from "./ActionsTypes";
+import {
+    ADD_GENRE_ID,
+    ADD_GENRES,
+    ADD_MOVIES,
+    SET_CURRENT_PAGE,
+    SET_MODAL_STATUS,
+    SET_MOVIE_VIDEOS
+} from "./ActionsTypes";
 
 export const setMovies = (data) => {
     return {type: ADD_MOVIES, payload: data};
@@ -6,6 +13,9 @@ export const setMovies = (data) => {
 
 export const setGenres = (data) => {
     return {type: ADD_GENRES, payload: data};
+}
+export const setGenreId = (data) => {
+    return {type: ADD_GENRE_ID, payload: data};
 }
 
 export const setCurrentPage = (data) => {

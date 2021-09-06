@@ -5,11 +5,12 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getMovieVideos} from "../../services/movies.api";
 import MovieIdVideos from "./MovieIdVideos";
-import {getGenres} from "../../services/genres.api";
 import {Badge} from "reactstrap";
 import {
     Link
 } from "react-router-dom";
+import {Rating} from "@material-ui/lab";
+import {setGenreId} from "../../redux/actions/ActionsCreator";
 
 export default function MoviesListCard() {
 
@@ -25,7 +26,8 @@ export default function MoviesListCard() {
                 release_date,
                 genre_ids,
                 overview,
-                id
+                id,
+                vote_average
             }
         }
     } = history;
@@ -33,7 +35,6 @@ export default function MoviesListCard() {
 
     useEffect(() => {
         dispatch(getMovieVideos(id));
-        dispatch(getGenres())
     }, [id, dispatch])
 
     let genresArr = [];
@@ -57,9 +58,17 @@ export default function MoviesListCard() {
                         <div className={'r1-1'}>Original title:</div>
                         <div className={'r1-2'}><h1>{original_title}</h1></div>
                     </div>
+
                     <div className={'r-2'}>
                         <div className={'r1-1'}>Release date:</div>
                         <div className={'r1-2'}><h5>{release_date}</h5></div>
+                    </div>
+
+                    <div className={'r-1'}>
+                        <div className={'r1-1'}>Rating:</div>
+                        <div className={'r1-2'}>
+                            <Rating max={10} size={'large'} defaultValue={vote_average} precision={0.5}/> {vote_average}/10
+                        </div>
                     </div>
 
                     <div className={'r-1'}>
@@ -69,14 +78,23 @@ export default function MoviesListCard() {
                                 key={index}
                                 id={'Badge'}
                             >
-                                <Link to={`/${value.name}`}>{value.name}</Link>
+                                <Link
+                                    to={`/${value.name}`}
+                                    onClick={() => dispatch(setGenreId(value.id))}
+                                >
+                                    {value.name}
+                                </Link>
                             </Badge>)}
                         </div>
                     </div>
-                    {overview && <div className={'r-2'}>
+
+                    {overview &&
+                    <div className={'r-2'}>
                         <div className={'overview-box'}>Overview:</div>
                         <p className={'r1-2'}><i>{overview}</i></p>
-                    </div>}
+                    </div>
+                    }
+
                 </div>
             </div>
             {

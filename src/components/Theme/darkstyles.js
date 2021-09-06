@@ -4,11 +4,11 @@ html {
     background-color: #181a1b !important;
     transition-duration: 500ms;
 }
-html, body, input, textarea, select, button {
+html, body, textarea, select, button {
     background-color: #181a1b;
 
 }
-html, body, input, textarea, select, button {
+html, body, textarea, select, button {
     border-color: #736b5e;
     color: #e8e6e3;
 
@@ -683,7 +683,7 @@ iframe {
 }
 .form-control {
     color: rgb(209, 205, 199);
-    background-color: rgb(24, 26, 27);
+    background-color: white;
     border-color: rgb(60, 65, 68);
 }
 .form-control:focus {

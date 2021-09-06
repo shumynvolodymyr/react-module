@@ -2,7 +2,6 @@ const apiKey = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNmJiNWI2MjM5OTczN2RiYjQ0MWJjNDE
 const headersAuthorization = {headers: {Authorization: `Bearer ${apiKey}`}};
 const configMovies = '/discover/movie?api_key=';
 const configGenre = '/genre/movie/list?api_key=';
-// export const configGenreId = '/genre/movie/list/id='; todo доробити
 const page = '&page='
 const url = 'https://api.themoviedb.org/3/';
 const withGenres = '&with_genres='
