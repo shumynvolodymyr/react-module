@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import darkstyles from "../Theme/darkstyles";
+import darkstyles from "../theme/darkstyles";
 import './Checkbox.css'
 
 export default function Checkbox() {

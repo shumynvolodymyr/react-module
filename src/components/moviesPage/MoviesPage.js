@@ -38,7 +38,6 @@ export default function MoviesPage({movies}) {
         <div className={'movies-page'}>
 
             {results.map((value, index) => <MoviesList key={index} film={value}/>)}
-
             <div className={'pagination-box'}>
                 <div className={'pages'}>
                     {pages.map((num, index) =>

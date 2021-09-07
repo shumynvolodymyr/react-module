@@ -32,18 +32,18 @@ export default function MoviesListCard() {
         }
     } = history;
 
-
     useEffect(() => {
         dispatch(getMovieVideos(id));
     }, [id, dispatch])
 
+
     let genresArr = [];
     const searchGenres = (genre_ids) => {
         for (let i = 0; i < genre_ids.length; i++) {
-            genres.map(value => {
-                let genre = value.genres.filter(data => data.id === genre_ids[i])
+            for (let j = 0; j < genres.length; j++) {
+                let genre = genres[j].genres.filter(value => value.id === genre_ids[i])
                 genresArr.push(genre[0]);
-            });
+            }
         }
     };
     searchGenres(genre_ids);
@@ -67,7 +67,7 @@ export default function MoviesListCard() {
                     <div className={'r-1'}>
                         <div className={'r1-1'}>Rating:</div>
                         <div className={'r1-2'}>
-                            <Rating max={10} size={'large'} defaultValue={vote_average} precision={0.5}/> {vote_average}/10
+                            <Rating max={10} size={'large'} name={'rating'} defaultValue={vote_average} precision={0.5}/> {vote_average}/10
                         </div>
                     </div>
 

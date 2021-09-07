@@ -8,10 +8,6 @@
     border: 2px solid #252525;
 }
 
-.t-row {
-
-}
-
 .r-1 {
     display: flex;
 }
@@ -23,8 +19,6 @@
 .r1-1 {
     margin: auto;
     width: 13%;
-    text-shadow: 1px 1px #c60;
-
 }
 
 .r1-2 {
@@ -33,7 +27,6 @@
 
 .overview-box {
     width: 13%;
-    text-shadow: 1px 1px #c60;
 }
 
 #Badge {
