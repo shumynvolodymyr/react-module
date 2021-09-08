@@ -1,7 +1,6 @@
 import MoviesList from "../moviesList/MoviesList";
 import './MoviesPage.css'
 import {getMoviesPage} from "../../services/movies.api";
-import {Button} from 'reactstrap';
 import {pageCreator} from "../../myFunc/PageCreator";
 import {useDispatch, useSelector} from "react-redux";
 
@@ -48,9 +47,9 @@ export default function MoviesPage({movies}) {
                     )}
                 </div>
                 <form onClick={stopPrevDef} id={'paginationForm'}>
-                    <Button color={'secondary'} onClick={prevPage}>&#9665;</Button>
+                    <button className={'pagination-btn'} color={'secondary'} onClick={prevPage}>&#9665;</button>
                     <input min={1} max={total_pages} type="number" value={page} onChange={changePage}/>
-                    <Button color={'secondary'} onClick={nextPage}>&#9655;</Button>
+                    <button className={'pagination-btn'} color={'secondary'} onClick={nextPage}>&#9655;</button>
                 </form>
             </div>
         </div>

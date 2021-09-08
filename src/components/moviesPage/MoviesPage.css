@@ -10,7 +10,7 @@
 }
 .pages {
     margin: 20px 0;
-    padding-left: 4%;
+    padding-left: 30%;
     width: 70%;
 }
 
@@ -35,14 +35,21 @@ display: flex;
     display: flex;
     justify-content: center;
     width: 20%;
-    height: 40px;
-    margin: 10px;
+    height: 30px;
+    margin-top: 15px;
+    position: absolute;
 }
 
 #paginationForm input {
-    width: 50%;
+    width: 20%;
     text-align: center;
     font-size: 16px;
+    border-radius: 5px;
+}
+
+.pagination-btn {
+    border-radius: 5px;
+    background: linear-gradient(#FE8B00 0%,#FF2E00 50%,#EC1606 100%);
 }
 
 
