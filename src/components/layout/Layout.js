@@ -16,7 +16,7 @@ export default function Layout(props) {
 
             <Modal
                 isOpen={modalStatus}
-                onModalClose={() => dispatch(setModalStatus(true))}
+                onModalClose={() => dispatch(setModalStatus(false))}
             />
         </>
     );

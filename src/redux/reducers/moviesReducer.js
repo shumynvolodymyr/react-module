@@ -1,6 +1,6 @@
 import {ADD_MOVIES, SET_CURRENT_PAGE, SET_MODAL_STATUS, SET_MOVIE_VIDEOS} from "../actions/ActionsTypes";
 
-const initialState = {movies: [], movieIdVideos: [], modal: true};
+const initialState = {movies: [], movieIdVideos: [], modal: false};
 
 export const MoviesReducer = (state = initialState, action) => {
     switch (action.type) {

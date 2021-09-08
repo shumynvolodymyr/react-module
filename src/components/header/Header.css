@@ -1,7 +1,8 @@
 .header {
+    width: 100%;
     border-bottom: 2px solid #b53600;
     margin-bottom: 7px;
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
@@ -10,9 +11,11 @@
 }
 
 .logo {
-    width: 300px;
-    height: 130px;
+    align-items: center;
+    width: 80%;
+    height: 100%;
     position: relative;
-    top: -28px;
+    top: -10px;
     cursor: pointer;
+    margin: 10px;
 }

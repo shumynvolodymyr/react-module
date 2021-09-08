@@ -4,7 +4,7 @@ import {
     ADD_MOVIES,
     SET_CURRENT_PAGE,
     SET_MODAL_STATUS,
-    SET_MOVIE_VIDEOS
+    SET_MOVIE_VIDEOS, SET_USER
 } from "./ActionsTypes";
 
 export const setMovies = (data) => {
@@ -26,4 +26,8 @@ export const setMovieIdVideos = (value) => {
 }
 export const setModalStatus = (value) => {
     return {type: SET_MODAL_STATUS, payload: value};
+}
+
+export const setUserName = (name) => {
+  return{type: SET_USER, payload:name};
 }

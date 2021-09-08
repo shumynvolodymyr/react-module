@@ -20,6 +20,11 @@ export default function Checkbox() {
 
     return (
         <div className={'switch-container'}>
+            <span className={'switch-icon'}>
+                {window.localStorage.getItem('theme') === 'dark'
+                    ? '🌙'
+                    : '☀'}
+            </span>
             <input
                 type="checkbox"
                 id={"switch1"}
@@ -33,7 +38,7 @@ export default function Checkbox() {
 
                 checked={window.localStorage.getItem('theme') === 'dark'}
             />
-            <label className="switch-for" htmlFor="switch1"> 🌙 dark mode</label>
+            <label className="switch-for" htmlFor="switch1"/>
         </div>
     );
 }
