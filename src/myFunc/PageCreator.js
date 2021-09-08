@@ -17,3 +17,4 @@ export const pageCreator = (pages, total_pages, page) => {
         }
     }
 }
+
