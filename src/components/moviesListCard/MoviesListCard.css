@@ -6,34 +6,46 @@
     margin: 10px;
     float: left;
     border: 2px solid #252525;
+    width: 40%;
 }
+
+.t-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px;
+}
+
 
 .r-1 {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .r-2 {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.r1-1 {
+.r1-1 {;
     margin: auto;
-    width: 13%;
+    width: 10%;
 }
 
 .r1-2 {
-    width: 87%;
+    width: 90%;
 }
 
 .overview-box {
-    width: 13%;
+    width: 20%;
 }
 
 #Badge {
     border: 2px solid #252525;
     margin: 2px;
     color: gold;
-    text-shadow: 1px 1px #c60;
     background: linear-gradient(#acafb4, #464a4d);
 }
 
@@ -52,8 +64,8 @@
     background: linear-gradient(#acafb4, #464a4d);
     border-color: #464a4d;
     display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
+    font-weight: 300;
+    line-height: 20px;
     color: rgb(255, 255, 255);
     text-align: center;
     text-decoration: none;
